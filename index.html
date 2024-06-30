@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <img src="./travel.jpg" alt="travel">
+</head>
+
+<body>
+    <div class="container">
+    <header class="header">
+    <h1 id="title" class="text-center">Survey Form</h1>
+        <!--1-->
+    <p id="description" class="description text-center">Please fill out this survey.</p>
+    </header>
+        <!--2-->
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name: </label>
+        <!--3-->
+            <input id="name" type="text" name="name" class="form-control" placeholder="Enter first and last name" required></div>
+        <!--4-->
+        <div class="form-group">    
+        <label id="email-label" for="email">Enter Your Email: </label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required /></div>
+        <!--5, 6-->
+        <div class="form group">
+        <label id="number-label" for="number" >Age: (Optional)<span class="clue" for="number"></span></label>
+        <input id="number" type="number" min="5" max="99" class="form-control" placeholder="5-99"/>
+        <!--9-->
+        </div>
+        <div class="form-group">
+            <p>Pick a destination</p>
+            <select id="dropdown" name="destination" class="form-control" required>
+                <option disabled selected value>Select Destination</option>
+                <option value="beach">Beach</option>
+                <option value="mountains">Mountains</option>
+                <option value="desert">Desert</option>
+                <option value="forest">Forest</option>
+                <option value="jungle">Jungle</option>
+                <option value="city">City</option>
+                <option value="none">None. I would rather stay at home.</option>
+            </select>
+        </div>
+
+        <div class="form-group"></div>
+        <p>Are you planning to travel in the next six months?</p>
+        <label><input name="plan" value="yes" type="radio" class="input-radio"/>Yes </label>
+        <label><input name="plan" value="maybe" type="radio" class="input-radio"/>Maybe </label>
+        <label><input name="plan" value="no" type="radio" class="input-radio"/>No </label>
+        
+
+        <div class="form-group">
+            <P>
+                How long do you want to be on vacation?
+            </P>
+        <select name="length" id="length" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="short">1-3 days</option>
+            <option value="medium">4-7 days</option>
+            <option value="long">8-10 days</option>
+            <option value="x-long">11+ days</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+        <!--94, 104-->
+        <p>What are you hoping to experience on vacation?
+        <span class="clue">(Check all that apply)</span></p>
+        <label><input type="checkbox" class="input-class" value="museums">Museums</label>
+        <label><input type="checkbox" class="input-class" value="local-cuisines">Local cuisine</label>
+        <label><input type="checkbox" class="input-class" value="shopping">Shopping</label>
+        <label><input type="checkbox" class="input-class" value="water-activities">Water activities</label>
+        <label><input type="checkbox" class="input-class" value="hiking-biking-camping">Hiking/Biking/Camping</label>
+        <label><input type="checkbox" class="input-class" value="spa-packages">Spa packages</label>
+        <label><input type="checkbox" class="input-class" value="sightseeing">Sightseeing</label>
+        <label><input type="checkbox" class="input-class" value="nightlife">Nightlife</label>
+        <label><input type="checkbox" class="input-class" value="theater">Theater</label>
+        <label><input type="checkbox" class="input-class" value="wildlife">Wildlife</label>
+
+    </div>
+    <!--200-->
+
+    <div class="form-group">
+        <p>Please provide any additional comments or questions below.</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter text here"></textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+                </div>
+</form>
+        </div>
+    </body>
+</html>
